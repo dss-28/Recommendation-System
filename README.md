@@ -66,9 +66,44 @@ The datasets are merged to form a single `ratings_with_name` table for easier lo
 - Add evaluation metrics and an interactive front-end using Streamlit or Gradio.
 
 ---
+How to Run
 
-## 💻 How to Run
+Clone the repository
 
-1. Clone the repository:
-```bash
-git clone <your-repo-link>
+git clone https://github.com/DarshanShirsat/BookRecommendation.git
+cd BookRecommendation
+
+Install dependencies
+
+pip install -r requirements.txt
+
+
+Run the notebook
+
+jupyter notebook Book_Recommendation_System.ipynb
+
+📊 Future Improvements
+
+Include additional book metadata (e.g., genre, author popularity) for better content-based recommendations.
+
+Implement weighting strategies for hybrid models (e.g., rarity boost, user preference weighting).
+
+Add a front-end demo with interactive book search and recommendations using Streamlit or Gradio.
+
+🔗 References
+
+Surprise Library – Collaborative Filtering
+
+Pandas Pivot Table Documentation
+
+Scikit-learn TF-IDF Vectorizer
+
+🛠 Tech Stack
+
+Python, Pandas, NumPy
+
+Scikit-learn (Cosine Similarity, TF-IDF)
+
+Jupyter Notebook
+
+Optional: Streamlit / Gradio for interactive demo
