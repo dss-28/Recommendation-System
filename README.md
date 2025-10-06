@@ -66,23 +66,24 @@ The datasets are merged to form a single `ratings_with_name` table for easier lo
 - Add evaluation metrics and an interactive front-end using Streamlit or Gradio.
 
 ---
-How to Run
 
-Clone the repository
+## 💻 How to Run
 
-git clone https://github.com/DarshanShirsat/BookRecommendation.git
-cd BookRecommendation
+### Clone the repository
+```bash
+git clone https://github.com/dss-28/Recommendation-System.git
+cd Recommendation-System
+
 
 Install dependencies
 
 pip install -r requirements.txt
 
-
 Run the notebook
 
 jupyter notebook Book_Recommendation_System.ipynb
 
-📊 Future Improvements
+## 📊 Future Improvements
 
 Include additional book metadata (e.g., genre, author popularity) for better content-based recommendations.
 
