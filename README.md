@@ -1,10 +1,4 @@
 
-# 📚 Book Recommendation System
-
-Absolutely! Let’s make your README **attractive, professional, and easy to read**, using formatting, emojis, clear sections, and concise explanations while keeping all technical details. Here’s the polished version:
-
----
-
 # 📚 Hybrid Book Recommender System
 
 > A smart book recommendation engine combining **Collaborative Filtering**, **Content-Based Filtering**, and insights from an **initial popularity-based experiment**.
