@@ -1,11 +1,10 @@
-# app.py (updated for demo)
+# app.py (updated for demo with side-by-side display)
 import streamlit as st
 import pickle
 import numpy as np
 import pandas as pd
 
 # ----------------- Load Saved Model Components -----------------
-
 with open("model/user_map.pkl", "rb") as f:
     user_map = pickle.load(f)
 
@@ -68,10 +67,16 @@ if st.button("Get Recommendations"):
         book_name = book_name_input if book_name_input != "" else None
         recommendations = hybrid_recommend(user_id_input, book_name)
         st.success(f"Top {len(recommendations)} Recommendations:")
-        for idx, (title, author, img_url) in enumerate(recommendations, 1):
-            st.markdown(f"**{idx}. {title}** by {author}")
-            if img_url and str(img_url) != "nan":
-                st.image(img_url, width=100)
+
+        # Display books side by side
+        books_per_row = 3  # adjust for columns per row
+        for i in range(0, len(recommendations), books_per_row):
+            cols = st.columns(books_per_row)
+            for j, (title, author, img_url) in enumerate(recommendations[i:i+books_per_row]):
+                with cols[j]:
+                    st.markdown(f"**{title}** by {author}")
+                    if img_url and str(img_url) != "nan":
+                        st.image(img_url, width=120)
+
     except Exception as e:
-        st.warning(f"Error: {e
-                             }. Please select valid User ID and Seed Book.")
+        st.warning(f"Error: {e}. Please select valid User ID and Seed Book.")
